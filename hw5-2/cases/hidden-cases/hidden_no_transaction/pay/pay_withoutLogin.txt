@@ -1,0 +1,5 @@
+# disallows user from paying without Login
+pay 4
+*
+Cannot pay, not logged in
+*

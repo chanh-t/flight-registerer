@@ -1,0 +1,20 @@
+To test cases folder recursively (all ``.txt`` files):
+    mvn test
+Don't forget to create a dbconn.properties and place it in this
+directory before invoking `mvn test`; otherwise, the unittests won't know
+what database to connect to!
+
+To test a specific folder recursively or a specific file:
+    mvn test -Dtest.cases="[folder/file]"
+(Windows users may need to quote the command slightly differently):
+    mvn test "-Dtest.cases=[folder/file]"
+
+To test with a specific server credential:
+    mvn test -Dcredential="[server_URL];[db_name];[username];[password]"
+
+To run flight app:
+    mvn compile exec:java
+
+To build jar with dependency and then run that jar:
+    mvn compile assembly:single
+    java -jar target/FlightApp-1.0-jar-with-dependencies.jar

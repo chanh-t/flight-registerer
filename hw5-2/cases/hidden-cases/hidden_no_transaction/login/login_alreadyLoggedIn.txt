@@ -1,0 +1,13 @@
+# Tests trying to login while already logged in
+# First login should succeed, second should fail
+#
+create user pwd 100
+login user pwd
+login user pwd
+quit
+*
+Created user user
+Logged in as user
+User already logged in
+Goodbye
+*

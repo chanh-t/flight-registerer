@@ -1,0 +1,16 @@
+#
+# Look up reservations, buy, cancel, and pay without logging in should fail.
+# 
+reservations
+book 0
+pay 0
+quit
+*
+#
+# expected printouts
+#
+Cannot view reservations, not logged in
+Cannot book reservations, not logged in
+Cannot pay, not logged in
+Goodbye
+*
